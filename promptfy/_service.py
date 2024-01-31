@@ -3,6 +3,13 @@ from pathlib import Path
 
 
 def promptfy(paths: list[Path]):
+    """
+    Generate a prompt from the files at the given paths.
+
+    Args:
+        paths: A list of paths to the files to include in the prompt.
+    """
+
     file_prompts = []
     for path in paths:
         try:

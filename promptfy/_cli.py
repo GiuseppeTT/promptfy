@@ -1,4 +1,5 @@
 from pathlib import Path
+from typing import Annotated
 
 import typer
 
@@ -8,7 +9,10 @@ app = typer.Typer()
 
 
 @app.command()
-def main(paths: list[Path]):
+def main(paths: Annotated[list[Path], typer.Argument(help="The paths to the files to include in the prompt.")]):
+    """
+    Generate a prompt from the files at the given paths.
+    """
     prompt = promptfy(paths)
 
     print(prompt, end="")
