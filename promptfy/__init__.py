@@ -1,1 +1,1 @@
-from ._promptfy import promptfy
+from ._service import promptfy

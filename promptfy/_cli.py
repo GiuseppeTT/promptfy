@@ -2,7 +2,7 @@ from pathlib import Path
 
 import typer
 
-from ._promptfy import promptfy
+from ._service import promptfy
 
 app = typer.Typer()
 
