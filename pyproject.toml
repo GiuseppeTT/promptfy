@@ -6,10 +6,15 @@ authors = ["Your Name <you@example.com>"]
 license = "MIT"
 readme = "README.md"
 
+[tool.poetry.scripts]
+promptfy = "promptfy._cli:app"
+
 [tool.poetry.dependencies]
 python = "^3.10"
 typer = {extras = ["all"], version = "^0.9.0"}
 
+[tool.poetry.group.dev.dependencies]
+ipython = "^8.21.0"
 
 [build-system]
 requires = ["poetry-core"]
